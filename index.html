@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MonkeyTime - 무료 트레이딩 시뮬레이션 게임</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "uxmx21glix");
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FRRQKLYD90"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-FRRQKLYD90');
+    </script>
+
+    <script>
+        // Custom Event Tracking
+        function trackCtaClick(location) {
+            // GA4 Event
+            gtag('event', 'click_cta', {
+                'event_category': 'conversion',
+                'event_label': 'telegram_bot',
+                'location': location
+            });
+
+            // Clarity Event
+            if (window.clarity) {
+                window.clarity("event", "click_cta");
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Pretendard', sans-serif;
+            background-color: #030712;
+            /* gray-950 */
+            background-image: radial-gradient(circle at 50% 0%, #1f2937 0%, transparent 70%);
+        }
+
+        .gradient-text {
+            background: linear-gradient(to right, #FCD34D, #F59E0B);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .cta-button {
+            background: linear-gradient(to right, #F59E0B, #D97706);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: 0.5s;
+        }
+
+        .cta-button:hover::after {
+            left: 100%;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(245, 158, 11, 0.4);
+        }
+
+        /* Animations */
+        @keyframes fade-in-up {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in-up {
+            animation: fade-in-up 0.8s ease-out forwards;
+        }
+
+        .delay-100 {
+            animation-delay: 0.1s;
+        }
+
+        .delay-200 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-300 {
+            animation-delay: 0.3s;
+        }
+
+        .glass-card {
+            background: rgba(31, 41, 55, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-950 text-white leading-relaxed">
+
+    <header class="w-full py-6 px-6 flex justify-between items-center max-w-6xl mx-auto">
+        <div class="text-2xl font-bold tracking-tighter">
+            <span class="text-yellow-400"><i class="fa-solid fa-gamepad"></i> Monkey</span>Time
+        </div>
+        <a href="https://t.me/newmonkeytimebot/game?startapp" onclick="trackCtaClick('header')"
+            class="text-sm font-semibold text-gray-300 hover:text-white transition">
+            앱 실행하기
+        </a>
+    </header>
+
+    <section class="relative pt-10 pb-20 px-6 text-center max-w-4xl mx-auto animate-fade-in-up">
+
+        <!-- Social Proof Badge -->
+        <div
+            class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm mb-8 animate-fade-in-up">
+            <span class="relative flex h-2.5 w-2.5">
+                <span
+                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
+            </span>
+            <span class="text-sm font-medium text-gray-300">현재 <span class="text-yellow-400 font-bold">1,240명</span> 플레이
+                중</span>
+        </div>
+
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight tracking-tight delay-100">
+            10초 뒤 가격이<br>
+            <span class="gradient-text">오를까? 내릴까?</span>
+        </h1>
+        <p class="text-gray-400 text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed delay-200">
+            복잡한 차트 공부는 그만! 순수한 "감"으로 즐기는 게임.<br class="hidden md:block">
+            <span class="text-gray-300 font-semibold">100% 무료</span> 시뮬레이션으로 전 세계 유저와 겨루세요.
+        </p>
+
+        <a href="https://t.me/newmonkeytimebot/game?startapp" onclick="trackCtaClick('hero')"
+            class="cta-button inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white rounded-xl shadow-lg w-full md:w-auto">
+            <i class="fa-brands fa-telegram mr-2"></i> 텔레그램에서 지금 바로 시작
+        </a>
+
+        <div
+            class="mt-16 relative mx-auto max-w-sm rounded-[2.5rem] border-8 border-gray-800 bg-gray-800 shadow-2xl overflow-hidden">
+
+            <img src="game.png" alt="Game Screen" class="w-full h-auto rounded-[2rem]">
+
+        </div>
+    </section>
+
+    <section class="bg-gray-900 py-20 px-6">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+
+            <div class="glass-card p-8 rounded-2xl hover:border-yellow-500/50 transition duration-300 group">
+                <div
+                    class="w-14 h-14 bg-yellow-500/10 rounded-xl flex items-center justify-center mb-6 text-yellow-400 text-2xl group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-bolt"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-white">직관적인 High or Low</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    복잡한 분석은 필요 없습니다. 버튼 하나로 예측하고 10초 만에 결과를 확인하세요. 지루할 틈 없는 스피드 게임!
+                </p>
+            </div>
+
+            <div class="glass-card p-8 rounded-2xl hover:border-blue-500/50 transition duration-300 group">
+                <div
+                    class="w-14 h-14 bg-blue-500/10 rounded-xl flex items-center justify-center mb-6 text-blue-400 text-2xl group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-white">리스크 없는 무료 게임</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    내 돈 잃을 걱정은 NO. 매일 제공되는 무료 포인트로 실전 감각을 키우고 UP/DOWN 개념을 익히세요.
+                </p>
+            </div>
+
+            <div class="glass-card p-8 rounded-2xl hover:border-purple-500/50 transition duration-300 group">
+                <div
+                    class="w-14 h-14 bg-purple-500/10 rounded-xl flex items-center justify-center mb-6 text-purple-400 text-2xl group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-trophy"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-white">글로벌 랭킹 대결</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    나의 게임 감각은 상위 몇 %일까요? 포인트를 모아 글로벌 랭커에 도전하고 명예를 얻으세요.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="py-20 px-6 text-center bg-gradient-to-b from-gray-950 to-gray-900">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            준비 되셨나요?
+        </h2>
+        <p class="text-gray-400 mb-10">
+            설치 없이, 회원가입 없이<br>텔레그램에서 즉시 실행됩니다.
+        </p>
+        <a href="https://t.me/newmonkeytimebot/game?startapp" onclick="trackCtaClick('bottom')"
+            class="cta-button inline-flex items-center justify-center px-10 py-5 text-xl font-bold text-white rounded-full shadow-xl">
+            🐒 지금 바로 게임 시작하기
+        </a>
+    </section>
+
+    <footer class="bg-black py-10 px-6 border-t border-gray-800 text-center">
+        <div class="max-w-4xl mx-auto text-gray-500 text-xs leading-relaxed">
+
+            <!-- Compliance Links -->
+            <div class="flex flex-wrap justify-center gap-4 md:gap-8 mb-8 text-sm font-medium text-gray-400">
+                <a href="#" class="hover:text-white transition">서비스 이용약관</a>
+                <span class="text-gray-700">|</span>
+                <a href="#" class="hover:text-white transition">개인정보처리방침</a>
+                <span class="text-gray-700">|</span>
+                <a href="mailto:support@monkeytime.com" class="hover:text-white transition">고객센터 문의</a>
+            </div>
+
+            <p class="mb-4">&copy; 2024 MonkeyTime. All rights reserved.</p>
+            <p>
+                [면책 조항] MonkeyTime은 가상자산 트레이딩을 주제로 한 <strong>시뮬레이션 게임(Simulation Game)</strong>입니다.<br>
+                본 서비스는 실제 금전적인 투자를 요구하거나 도박 서비스를 제공하지 않습니다.<br>
+                게임 내에서 획득한 포인트나 재화는 실제 현금 가치를 지니지 않으며 환전이 불가능합니다.<br>
+                본 게임은 교육 및 엔터테인먼트 목적으로만 제공됩니다.
+            </p>
+        </div>
+    </footer>
+
+
+
+    <!-- Sticky Bottom CTA (Mobile Only) -->
+    <div id="sticky-cta"
+        class="fixed bottom-0 left-0 w-full p-4 z-50 transform translate-y-full transition-transform duration-500 md:hidden">
+        <div
+            class="absolute inset-x-0 bottom-0 top-6 bg-gray-900/95 backdrop-blur-xl border-t border-white/10 shadow-2xl rounded-t-2xl -z-10">
+        </div>
+        <a href="https://t.me/newmonkeytimebot/game?startapp" onclick="trackCtaClick('sticky_mobile')"
+            class="relative w-full flex items-center justify-center px-6 py-4 text-lg font-bold text-white bg-gradient-to-r from-yellow-500 to-amber-600 rounded-xl shadow-lg hover:from-yellow-400 hover:to-amber-500 transition-all active:scale-95">
+            <i class="fa-brands fa-telegram mr-2 text-xl"></i> 무료로 게임 시작하기
+        </a>
+    </div>
+
+    <script>
+        // Sticky CTA Logic
+        const stickyCta = document.getElementById('sticky-cta');
+        const heroSection = document.querySelector('section'); // Targeting the first section
+
+        window.addEventListener('scroll', () => {
+            const scrollPosition = window.scrollY;
+            const triggerPoint = 300; // Show after scrolling 300px
+
+            if (scrollPosition > triggerPoint) {
+                stickyCta.classList.remove('translate-y-full');
+            } else {
+                stickyCta.classList.add('translate-y-full');
+            }
+        });
+
+        // Add simple entrance animations on scroll
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in-up');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.glass-card').forEach(el => observer.observe(el));
+    </script>
+
+</body>
+
+</html>
